@@ -1,21 +1,25 @@
-🎉 V0.4.12 版本更新啦！
+🎉 V0.5.0 版本更新啦！
 
-[previewVideoUrl]: https://www.bilibili.com/video/BV1RX5z6gEXq/
+[previewVideoUrl]: https://www.bilibili.com/video/BV1Q87u6sEpM/
 
 ✨ 新增功能：
 - apimart gptimage2 官方版 增加 质量选项 
 - 音频节点 indextts2克隆 新增音色转换功能
-- 新增 ”剪辑节点” 测试版
-- 新增 “浏览器节点” 测试版
-- 新增 “右下角的agent入口” 测试版
+- 新增 ”剪辑节点” 测试版 做一些简单的剪辑
+- 新增 “浏览器节点” 测试版 可以提取图片/文字直接到画布执行下一步操作
+- 新增 “右下角的agent入口” 测试版 自然语言描述操作画布
+- 新增 “右下角的语音工作室” vip限定 可以用来批量识别视频声音切割克隆
+- 新增 视频生成节点 “即梦官方” seedance 2.0 mini模型
 
 🐛 修复与优化：
-- 
-
+- 360全景图节点 显示画面水平翻转已经修复
+- 优化图片入参缩略图的显示速度
+- 改进并统一了保存项目
 
 AI-CanvasPro！ windows/mac 应用版本已发布 欢迎体验！ 
 BUG问题或要新增功能反馈文档：https://i1etb6xynr.feishu.cn/wiki/N2C3wD6SgisOpek11mfcfJCinkr?from=from_copylink
 
+---
 
 🎉 V0.4.11 版本更新啦！
 
@@ -38,6 +42,7 @@ BUG问题或要新增功能反馈文档：https://i1etb6xynr.feishu.cn/wiki/N2C3
 AI-CanvasPro！ windows/mac 应用版本已发布 欢迎体验！ 
 BUG问题或要新增功能反馈文档：https://i1etb6xynr.feishu.cn/wiki/N2C3wD6SgisOpek11mfcfJCinkr?from=from_copylink
 
+---
 
 🎉 V0.4.10 版本更新啦！
 

@@ -28,9 +28,17 @@
 
 ***
 
-## &#x20;视频演示 
+## 视频演示
 
-\[[人物场景固定 seedance2.0生成](https://ashuoai.github.io/AI-CanvasPro/)]
+- [使用说明1](https://www.bilibili.com/video/BV1RX5z6gEXq/)
+- [浏览器节点用法](https://www.bilibili.com/video/BV1Q87u6sEpM/)
+- [seedance2.0 线条控制运镜玩法](https://www.bilibili.com/video/BV1ZzjL6UEoA/)
+- [Scail2 全面实测使用方法](https://www.bilibili.com/video/BV16DJH6jEmk/)
+- [RH 模型 Bernini 详细使用说明](https://www.bilibili.com/video/BV1TwEb6gEsC)
+- [游戏实际演示制作教程](https://www.bilibili.com/video/BV17soQB7EwB)
+- [影视人物替换演示](https://www.bilibili.com/video/BV1YEDKBwEz7)
+- [人物 / 场景一致性 360° 全景图提取 SD2.0 生成演示](https://www.bilibili.com/video/BV1FqdyBwEGx)
+- [人物场景固定 seedance 2.0 生成](https://ashuoai.github.io/AI-CanvasPro/)
 
 ## ✨ 功能特性
 
@@ -40,34 +48,80 @@
 - 小地图导航 + 画布对齐网格
 - 多画布 切换
 - 适应画布（一键归位）
+- 框选、多选、编组、对齐、复制粘贴和撤销重做
 
 ### 🤖 AI 节点类型
 
 | 节点类型              | 说明                          | 支持模型                       |
 | ----------------- | --------------------------- | -------------------------- |
+| 📥 **源素材节点**      | 承载文本、图片、视频、音频素材，支持拖拽导入和节点连线 | 本地文件 / 远程素材 / 生成结果       |
 | 🖼️ **AI 图像生成节点** | 输入提示词，一键生成图片，支持批量出图         | Banana Pro、GRSAI 等         |
 | ✍️ **AI 文本生成节点**  | 多轮对话、流式输出，支持 @ 引用其他节点结果     | Gemini、GPT 系列等 OpenAI 兼容接口 |
 | 🎬 **AI 视频生成节点**  | 文生视频 / 图生视频                 | 主流视频模型                     |
 | 🔊 **AI 音频生成节点**  | 文本转语音生成                     | TTS 模型                     |
+| ✂️ **剪辑节点**       | 把图片 / 视频片段编排成简单时间线并导出       | 本地媒体处理                     |
+| 🧩 **拼图 / 分镜节点**  | 拼接图片、整理分镜、生成分镜脚本            | 画布编排能力                     |
+| 🌐 **浏览器节点**      | 从网页提取图片、视频和文字，发送到画布继续创作     | Web 参考 / 素材采集              |
 | 🌐 **360 全景图节点**  | 生成沉浸式 360 度全景图像             | 全景生成模型                     |
 | 📐 **3D导演台节点**    | 创建和编辑 3D 场景，支持模型导入与场景布局     | 3D 渲染引擎                    |
 | 💬 **注释节点**       | 添加文本注释、说明和标记，增强画布可读性、作为标记跳转 | 无（纯功能节点）                   |
+
+### 🛠️ 媒体工具链
+
+- 图片：裁剪、标注、遮罩编辑、擦除 / 重绘、主体识别、抠图、高清、扩图、宫格裁剪、360 全景图。
+- 视频：裁剪、抠像、擦除、高清、倒放、音画分离、对口型、抽帧、场景检测、继续生成视频。
+- 音频：播放预览、裁剪、音色克隆、音色转换、人声分离、语音工作室批量处理。
+- 生成任务：任务进度、后台完成提示、声音提醒、取消、刷新后恢复、结果回填到节点。
 
 ### 💾 项目管理
 
 - 多项目切换（左侧边栏项目面板）
 - `Ctrl+S` 保存画布到本地 `user/Canvas Project/` 目录
 - 自动缓存画布状态，刷新页面即时恢复
-- 项目文件为标准 JSON 格式，方便迁移（类似comfyui操作，直接拖拽json文件到画布即可打开）
+- 项目文件保存画布结构、节点、连线和素材路径；完整迁移建议使用项目资源收集 / `.aicpkg` 项目包，或同步携带 `output/`、`data/uploads/` 等素材目录。
+- 支持资产库、工作流复用、文件管理、项目资源收集和项目包迁移
+
+### 🧠 创作辅助
+
+- 支持 `@` 引用画布节点、资产和上游结果，把文本设定、生成结果或参考素材带入当前提示词。
+- 支持 `/` 打开预设命令菜单，按当前节点类型快速插入常用提示词模板。
+- 支持右下角 Agent 入口，用自然语言描述画布操作。
+- 支持 API 连接测试、订阅中心、VIP 工作流提示和自动更新。
+
+## 🎬 适合做什么
+
+- 角色 / 场景 / 产品图参考整理
+- 文生图、图生图、图片编辑和批量出图
+- 图片继续生成视频、视频编辑、视频抠像和高清
+- 文案、脚本、分镜、旁白、音色克隆和音频处理
+- 把常用节点流程保存成资产或工作流，后续一键复用
+
+更新内容可以查看：[release_notes.txt](./release_notes.txt)
 
 ## 🚀 快速开始
 
-### 方法 1：源码运行（推荐开发者）
+### 方法 1：下载应用版（推荐普通用户）
 
-1. 需要安装git /ffmpeg/python3.12以上
+普通用户建议优先使用应用版，不需要手动配置源码环境。Windows 和 macOS 都可以在 GitHub Releases 下载。
+
+1. **下载应用**
+   - 最新版下载页：[GitHub Releases Latest](https://github.com/ashuoAI/AI-CanvasPro/releases/latest)
+   - 全部版本下载页：[GitHub Releases](https://github.com/ashuoAI/AI-CanvasPro/releases)
+   - Windows 用户：在 Assets 中下载 `AI-CanvasPro-windows-*.exe`
+   - macOS 用户：在 Assets 中下载 `AI-CanvasPro-Mac-arm64-*.dmg` 或 `.zip`
+2. **安装并启动**
+   - Windows：双击下载的 `.exe` 文件。
+   - macOS：打开 `.dmg` 或解压 `.zip` 后启动应用。
+3. **首次使用**
+   打开应用后，先在设置里配置对应平台的 API Key，再开始创建画布节点。
+
+### 方法 2：源码运行（推荐开发者）
+
+1. 需要安装 Git / Node.js / Python 3.12 以上 / FFmpeg
    1. git:[Git - Install for Windows](https://git-scm.com/install/windows)
-   2. ffmpeg:[Download FFmpeg](https://ffmpeg.org/download.html)
-   3. python:[Welcome to Python.org](https://www.python.org/)
+   2. Node.js:[Download Node.js](https://nodejs.org/)
+   3. ffmpeg:[Download FFmpeg](https://ffmpeg.org/download.html)
+   4. python:[Welcome to Python.org](https://www.python.org/)
 2. **克隆仓库**
    ```bash
    任意一个不带中文路径的目录 上面的地址栏 输入 CMD
@@ -76,28 +130,31 @@
    # 进入项目
    cd AI-CanvasPro
    ```
-3. **安装依赖并启动**
+3. **安装依赖**
    ```bash
+   # 安装前端 / Electron 依赖
+   npm install
+
    # 创建虚拟环境
    python -m venv venv
+
    # 激活虚拟环境
    venv\Scripts\activate.bat
+
    # 安装依赖
    pip install -r requirements.txt
-   # 启动服务
+   ```
+4. **启动开发版应用**
+   ```bash
+   npm run electron
+   ```
+   Electron 会启动或复用本地 Python 服务。
+
+5. **只启动本地 Web 服务**
+   ```bash
    python server.py
    ```
-4. **打开浏览器**
-   访问 <http://localhost:8777> 即可使用。
-
-### 方法 2：Windows系统 一键整合包（推荐普通用户）
-
-1. **下载整合包**
-   [点击下载](https://github.com/ashuoAI/AI-CanvasPro/releases)
-2. **解压文件**
-   将下载的压缩包解压到不带中文的路径，例如 `D:\AI-CanvasPro`
-3. **一键启动**
-   直接双击 **`AI CanvasPro.exe`** 文件即可
+   然后访问 <http://localhost:8777>。
 
 ***
 
@@ -118,11 +175,14 @@
 | **APImart**          | 大语言模型,图像生成，前往 [APImart.ai](https://apimart.ai/zh/register?aff=ashuoai) 获取 Key     |
 | **派欧云 (PPIO)（准备下架）** | 大语言模型,图片生成，前往 [ppio.com](https://ppio.com/user/register?invited_by=SF4VL3) 获取 Key |
 | **GRSAI**            | 大语言模型,图像生成，前往 [grsai.com](https://grsai.com/zh/dashboard/user-info) 获取 Key        |
+| **火山引擎（火山方舟）**      | 豆包 / 火山方舟模型，前往 [火山方舟控制台](https://console.volcengine.com/ark/) 或 [API Key 文档](https://www.volcengine.com/docs/82379/1541594) 获取 Key |
 | **通用 OpenAI 接口**     | 支持任何兼容 OpenAI 格式的第三方接口                                                            |
 
 ***
 
 ### 基础操作
+
+更多快捷键可以在 **设置 → 快捷键** 中查看和修改。
 
 | 操作                        | 说明                                       |
 | ------------------------- | ---------------------------------------- |
@@ -142,11 +202,13 @@
 2. 从输出锚点拖拽到目标节点的输入锚点
 3. 连线建立后，上游节点的结果会自动流向下游
 
-### 引用其他节点（@ 语法  / 预设 ）
+### `@` 引用和 `/` 预设
 
-在 生成节点的提示词编辑框中，输入 `@` 即可弹出引用菜单，选择画布上任意节点，其输出结果将被动态嵌入提示词中。
+在生成节点的提示词编辑框中输入 `@`，会弹出引用菜单。你可以选择画布上的节点、资产或上游结果，把角色设定、场景说明、参考图、参考视频、参考音频等内容带到当前节点里继续生成。
 
-输入 `/` 引用预设命令，快速调用内置预设（后续支持自定义预设）
+在提示词编辑框中输入 `/`，会打开预设命令菜单。选择预设后会自动插入常用提示词模板，再按当前需求继续修改即可。不同节点会显示不同预设，以当前界面为准。
+
+图片、视频、音频这类素材优先用连线传递；文本设定、说明和提示词片段常用 `@` 引用。
 
 ***
 
